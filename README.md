@@ -35,7 +35,7 @@ The script does not automatically set an incident as Fixed. The reason for this 
 This script works as an event receive within Nagios. You should setup a nagios command like so:
 `cachet_notify.py -c '$_SERVICECOMPONENT$' -num '$_SERVICESERVERCOUNT$' -host '$HOSTNAME$' -name '$SERVICEDESC$' -state '$SERVICESTATE$' -type '$SERVICESTATETYPE$'`
 
-##Parameter Details:
+## Parameter Details:
 * `-c --component`: This should match the name of the component you setup in Cachet
 * `-num --numberServers`: This should be the number of servers that your service is running on
 * `-host --hostName`: This should be the server name that the service is running on or some other unique value for your service check.
