@@ -45,5 +45,5 @@ This script works as an event receive within Nagios. You should setup a nagios c
 
 ## Custom Variables
 This also requires you to setup two custom variables on your service:
-1. \_COMPONENT This should match the name of the component you setup in Cachet
-2. \_SERVERCOUNT This should be set to the number of servers that the service is running on
+1. \_COMPONENT: This should match the name of the component you setup in Cachet
+2. \_SERVERCOUNT: This should be set to the number of servers that the service is running on
