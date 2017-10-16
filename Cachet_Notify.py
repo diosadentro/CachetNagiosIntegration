@@ -180,6 +180,7 @@ def GetServerListFromMessage(message):
             serverList = server.split(":")
 
             # Add the information to the dictionary
+            # Hack support if else chain for Python v2
             if int(serverList[1]) == 1:
                 dic[serverList[0]] = ServerStatus.WARNING
             elif int(serverList[1]) == 2:
@@ -316,6 +317,7 @@ def ProcessAlert(component, serverCount, hostName, serviceName, serviceState, se
         sys.exit("Could not find component")
 
     # Get the current status of the component
+    # Hack support if else chain for Python v2
     if int(returnedComponent["status"]) == 1:
         status = ComponentStatus.CACHET_COMPONENT_STATUS_OPERATIONAL
     elif int(returnedComponent["status"]) == 2:
