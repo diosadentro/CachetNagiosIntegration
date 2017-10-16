@@ -32,7 +32,7 @@ The script does not automatically set an incident as Fixed. The reason for this 
 5. NotifyOnSoftState: If set to true, soft states from Nagios will result in incidents
 
 ## Setup Nagios
-This script works as an event receive within Nagios. You should setup a nagios command like so:
+This script works as an event receiver within Nagios. You should setup a nagios command like so:
 `cachet_notify.py -c '$_SERVICECOMPONENT$' -num '$_SERVICESERVERCOUNT$' -host '$HOSTNAME$' -name '$SERVICEDESC$' -state '$SERVICESTATE$' -type '$SERVICESTATETYPE$'`
 
 ## Parameter Details:
