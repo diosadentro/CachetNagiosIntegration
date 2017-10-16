@@ -44,6 +44,7 @@ This script works as an event receiver within Nagios. You should setup a nagios 
 * `-type --serviceStateType`: This is the state type of the service as reported by Nagios: HARD or SOFT
 
 ## Custom Variables
-This also requires you to setup two custom variables on your service:
+This also requires you to setup two custom variables on your service inside Nagios:
+Things to remember about custom variables that are used as macros in the command, They should always start with an \_. When you reference them in your script the variable will start with \_SERVICE (since these custom variables are being put on your service) and then your custom variable without the \_. Hope this saves you some time. You can read [https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/3/en/customobjectvars.html](This link) for more information
 1. \_COMPONENT: This should match the name of the component you setup in Cachet
 2. \_SERVERCOUNT: This should be set to the number of servers that the service is running on
